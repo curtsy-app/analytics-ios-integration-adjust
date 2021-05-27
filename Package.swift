@@ -17,8 +17,12 @@ let package = Package(
                 "Segment",
                 "Adjust"
             ],
-            path: "Pod/Classes",
-            publicHeadersPath: ""
+            path: "Pod/",
+            sources: ["Classes"],
+            publicHeadersPath: "Classes",
+            cSettings: [
+                .headerSearchPath("Classes")
+            ]
         )
     ]
 )
